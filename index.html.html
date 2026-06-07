@@ -879,24 +879,8 @@ footer{padding:1.75rem 3rem;border-top:1px solid rgba(255,255,255,.06);display:f
   color:#facc15;
   animation:floatBadge 3.5s ease-in-out infinite 0.4s, scaleIn 0.6s cubic-bezier(.34,1.56,.64,1) 1.7s both;
 }
-/* Mobile badge row — shown below image on small screens */
-.mobile-badges{display:none}
 @media(max-width:600px){
-  /* hide absolute-positioned badges */
-  .fb-1,.fb-2,.fb-3,.fb-4{display:none}
-  /* show the mobile badge row */
-  .mobile-badges{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:.5rem;
-    margin-top:1rem;
-    padding:0 .5rem;
-  }
-  .mobile-badges .float-badge{
-    position:static;
-    animation:floatBadge 3s ease-in-out infinite;
-  }
+  .float-badge{display:none}
 }
 
 
@@ -1195,14 +1179,6 @@ footer{padding:1.75rem 3rem;border-top:1px solid rgba(255,255,255,.06);display:f
 
       <!-- floor glow -->
       <div class="profile-floor-glow"></div>
-    </div>
-
-    <!-- Mobile-only badge row (shown below image on phones) -->
-    <div class="mobile-badges">
-      <div class="float-badge" style="background:rgba(124,58,237,0.2);border-color:rgba(124,58,237,0.5);color:#c084fc">⚡ n8n Expert</div>
-      <div class="float-badge" style="background:rgba(34,211,238,0.15);border-color:rgba(34,211,238,0.4);color:#22d3ee">🤖 LangChain</div>
-      <div class="float-badge" style="background:rgba(74,222,128,0.15);border-color:rgba(74,222,128,0.4);color:#4ade80">🐍 Python</div>
-      <div class="float-badge" style="background:rgba(250,204,21,0.15);border-color:rgba(250,204,21,0.4);color:#facc15">🌐 3+ Yrs</div>
     </div>
   </div>
   </div>
