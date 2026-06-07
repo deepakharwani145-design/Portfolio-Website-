@@ -756,25 +756,28 @@ footer{padding:1.75rem 3rem;border-top:1px solid rgba(255,255,255,.06);display:f
   z-index:3;
 }
 
-/* name badge inside image */
+/* name badge — sits below the circle, never clipped */
 .profile-name-badge{
   position:absolute;
-  bottom:clamp(18px,6%,40px);left:0;right:0;
-  text-align:center;z-index:4;
-  padding:0 16px;
+  bottom:clamp(4px,2%,18px);left:0;right:0;
+  text-align:center;z-index:6;
+  padding:0 12px;
+  pointer-events:none;
 }
 .profile-name-badge h2{
   font-family:'Syne',sans-serif;
-  font-size:clamp(0.95rem,3vw,1.35rem);font-weight:800;
+  font-size:clamp(1rem,3vw,1.4rem);font-weight:800;
   color:#fff;margin:0;
   letter-spacing:-0.01em;
-  text-shadow:0 2px 16px rgba(0,0,0,0.7);
+  text-shadow:0 2px 16px rgba(0,0,0,0.9), 0 0 30px rgba(124,58,237,0.5);
+  white-space:nowrap;
 }
 .profile-name-badge p{
-  font-size:clamp(0.62rem,2vw,0.8rem);color:#c084fc;
+  font-size:clamp(0.65rem,2vw,0.82rem);color:#c084fc;
   font-weight:600;margin:4px 0 0;
   letter-spacing:0.08em;text-transform:uppercase;
-  text-shadow:0 2px 8px rgba(0,0,0,0.5);
+  text-shadow:0 2px 8px rgba(0,0,0,0.7);
+  white-space:nowrap;
 }
 
 /* status dot */
@@ -1164,11 +1167,12 @@ footer{padding:1.75rem 3rem;border-top:1px solid rgba(255,255,255,.06);display:f
           <div class="status-dot"></div>
           <span>AVAILABLE</span>
         </div>
-        <!-- name badge -->
-        <div class="profile-name-badge">
-          <h2>Deepak Harwani</h2>
-          <p>AI Automation Expert</p>
-        </div>
+      </div>
+
+      <!-- name badge (outside img-wrap so it is never clipped by border-radius) -->
+      <div class="profile-name-badge">
+        <h2>Deepak Harwani</h2>
+        <p>AI Automation Expert</p>
       </div>
 
       <!-- floating skill badges -->
